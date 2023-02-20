@@ -1,0 +1,12 @@
+Implementando Angular Universal
+
+
+Para crear el módulo de aplicación del lado servidor, ejecute el siguiente comando de la CLI.app.server.module.ts
+
+    > ng add @nguniversal/express-engine
+
+
+Universal en acción
+Para empezar a representar la aplicación con Universal en el sistema local, utilice el siguiente comando.
+
+    > npm run dev:ssr

@@ -1,0 +1,12 @@
+Code splitting a nivel de rutas
+
+PreLoadAllModules : es una estrategia de carga el cual consiste en cargar todos los módulos de nuestra aplicación cuando el browser haya terminado de cargar nuestra pantalla inicial
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes, {
+    preloadingStrategy: PreloadAllModules
+  })],
+  exports: [RouterModule]
+})```
+
+la consecuencia ocurre si nuestra aplicación es grande al tener muchos módulos esta estrategia es ineficiente ya que estamos cargando demasiados datos 

@@ -1,0 +1,3 @@
+Usando pipes puros
+
+Funciones puras : Sin importar cuantas veces ejecutes una funcion con los mismos parametros siempre va a dar el mismo resultado

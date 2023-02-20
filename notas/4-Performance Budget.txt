@@ -1,0 +1,30 @@
+Performance Budget
+
+Performance Budget
+es una herramienta para colocar minimos de costo para nuestras aplicaciones.
+angular.json permite configurar el peso maximo de nuestros paquetes
+De igual manera no hace falta normalmente configurarlo ya que angular lo hace por nosotros
+
+budgets
+type: initial|anyComponentStyle
+maximumWarning: peso en kb, mb
+maximumError: peso en kb, mb
+
+warning = te avisa como un warning
+maximum = no te deja compilar la aplicacion
+
+APARTE
+podemos hacer un script en package.json para ejecutar
+el webpack-bundle-analyzer con un npm run analyzer
+
+// package.json
+...
+"scripts": {
+    ...
+    "analyzer": "webpack-bundle-analyzer dist/my-project/stats-es2015.json"
+    ...
+}
+...
+Luego para correrlo
+
+npm run analyzer

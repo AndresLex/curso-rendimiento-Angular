@@ -1,0 +1,20 @@
+Implementando Webpack Bundle Analyzer
+
+Webpack bundle analyzer: analiza los paquetes que utilizamos en nuestro proyecto
+
+instalarlo
+
+npm install webpack-bundle-analyzer --save-dev
+compilamos con la bandera para generar un archivo de estadisticas
+
+ng build --prod --stats-json
+en la carpeta dist ubicamos el archivo stats-es2015.json
+
+dist/my-project/stats-es2015.json 
+usando npx, corremos el comando para generar el analisis
+
+npx webpack-bundle-analyzer dist/my-project/stats-es2015.json
+nos sale luego algo compilamos
+
+webpack bundle analyzer is started at http://127.0.0.1:8888 
+donde podremos ver el resultado con estadisticas y graficos.

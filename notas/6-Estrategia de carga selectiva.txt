@@ -1,0 +1,42 @@
+Estrategia de carga selectiva
+
+//crear el service
+ng g s core/services/preload
+
+// archivo core/services/preload.services.ts
+
+            import { Inyectable} from '@angular/core'
+            import { PreloadingStrategy } from '@angular/router'
+            import { Observable, of } from 'rxjs'
+
+            expport class PreloadService implements PreloadingStrategy {
+                preload(route: Route, load: ()=> Observable<any>) : Observable<any> {
+                    if (route.data && route.data['preload']) {
+                        return load();
+                    }else {
+                        return of()
+                        // of() observable vacio
+                    }
+                }
+            }
+
+// archivo app-routing.module.ts
+//agrega metadata a las rutas
+            ...
+            import { PreloadService } from './core/services/preload.service'
+            ...
+            {
+                path:'home',
+                loadChildren: ()=>import('path').then(m=>m.MModule),
+                data: { preload: true }
+                // ese preload puede ser una variable que nosotros creemos
+            }
+            ...
+            //cambiar la estrategia de precarga 
+            @NgModule({
+                imports: [RouterModule.forRoot(routes, {
+                    preloadingStrategy: PreloadService
+                })],
+                exports: [RouterModule]
+            })
+            export class AppRoutingModule { }

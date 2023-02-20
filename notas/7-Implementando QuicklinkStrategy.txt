@@ -1,0 +1,35 @@
+QuicklinkStrategy
+detecta los link que estan en el viewport y precarga esos modulos
+Utiliza IntersectionObserver para llevar a cabo su tarea.
+
+installar quicklink
+
+npm install ngx-quicklink --save
+Importarlo en app.module y shared.module
+
+            // app.module.ts y tambien en shared.module.ts
+            import { QuicklinkStrategy } from 'ngx-quicklink'
+
+            @NgModule({
+                ...
+                imports: [
+                    ...
+                    QuicklinkModule
+                ]
+            })
+
+Implementar la estrategia en el app-routing
+
+            // app-routing.module.ts 
+            import { QuicklinkStrategy } from 'ngx-quicklink'
+
+            ...
+            @NgModule({
+                imports: [RouterModule.forRoot(routes, {
+                    enableTRacing: false,
+                    preloadingStrategy: QuicklinkStrategy,
+                    paramsInheritanceStrategy: 'always'
+                })],
+                exports: [RouterModule]
+            })
+            export class AppRoutingModule { }

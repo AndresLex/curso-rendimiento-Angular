@@ -1,0 +1,27 @@
+Qué es un bundle size? Tree shaking
+
+Bundle Size: Cuánto pesa en bytes.
+Lazy loading: Técnica que modulariza la aplicación.
+.
+.
+JS realiza 4 pasos par ala carga de la app:
+
+Descargar: este paso es el toma más tiempo.
+Parsear
+Compilarlo
+Renderizarlo
+.
+.
+tree shaking
+Una técnica en la cual removemos las librerías y código que no se utiliza en la app.
+
+
+----------------------------------------------
+Bundle size
+cuanto pesa en bytes la aplicacion
+
+Lazy loading
+fragmentar la aplicacion para cargarlas de a partes
+
+Tree Shaking
+eliminar el codigo que no se utiliza. eliminar codigo que no se utilice tanto con nuestro codigo y las librerias que utilicemos.

@@ -1,0 +1,10 @@
+Bundlephobia
+
+Con bundlephobia.com podemos comparar librerias y utilizar las más convenientes para el peso de nuestro app con lo consiguiente reduciendo el tiempo de carga de la misma.
+
+es una pagina donde podemos ver
+
+El costo de los paquetes que utilizamos nos dice el peso y el peso minificado
+El tiempo de descarga
+Si es amigable con tree shaking.
+Ademas nos dice si hay paquetes similares y mas livianos
